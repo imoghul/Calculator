@@ -1,0 +1,105 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/mnt/ncsudrive/i/immoghul/Calculator
+T_opt
+!s110 1672190392
+V9?30X4LRHZK[DgdZ0b;@B3
+Z2 04 8 4 work adder_tb fast 0
+=1-141877559b85-63ab99b1-75e45-1112
+Z3 !s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
+Z4 tCvgOpt 0
+n@_opt
+Z5 OE;O;2021.2;73
+R1
+T_opt1
+!s110 1672262351
+VRhJY5Fij>hI;<:Fl;Sbak2
+R2
+=1-14187755b88b-63acb2ce-62590-34da
+R3
+o-quiet -auto_acc_if_foreign -work work +acc
+R4
+n@_opt1
+R5
+vadder
+Z6 !s110 1672262346
+!i10b 1
+!s100 <_EBUzU:b[h5ZkG66T]=20
+IGJUGXGL8GCFdnXzToiY4l3
+R1
+w1672262344
+8adder.v
+Fadder.v
+!i122 12
+L0 1 22
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OE;L;2021.2;73
+r1
+!s85 0
+31
+Z9 !s108 1672262346.000000
+Z10 !s107 multiplier.v|adder.v|adder_tb.v|
+Z11 !s90 adder_tb.v|adder.v|multiplier.v|
+!i113 0
+Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+vadder_tb
+R6
+!i10b 1
+!s100 l8dRanzm[TlTlSmeYL:E:1
+I7B9BD^zJeme?i=bl;cZ=`1
+R1
+w1672262067
+8adder_tb.v
+Fadder_tb.v
+!i122 12
+L0 1 35
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R4
+vmultiplier
+R6
+!i10b 1
+!s100 >kkib`Q]N_C;IBz21zkXI2
+IRAen40jf2o2L4a21_3ch>3
+R1
+w1672189794
+8multiplier.v
+Fmultiplier.v
+!i122 12
+L0 1 20
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R4
