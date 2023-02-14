@@ -1,9 +1,9 @@
-module adder_tb;
+module multiplier_tb;
 
   reg rst_n, clock;
   reg [3:0] A,B;
   wire valid,en;
-  wire [4:0] sum;
+  wire [7:0] product;
   
 
   multiplier #(.inSize(4)) DUT (
@@ -12,7 +12,7 @@ module adder_tb;
     .en( en ),
     .A( A ),
     .B( B ),
-    .sum( sum ),
+    .product( product ),
     .valid( valid )
   );
 
@@ -20,11 +20,22 @@ module adder_tb;
   initial clock = 0;
   always #5 clock = ~clock;
   assign en = 1;
+  
+  initial begin
+
+
+	  $dumpfile("multiplier_tb.vcd");
+	  $dumpvars(0,DUT);
+	  $monitor("%d times %d = %d",A,B,product);
+
+  end
+
+
   // active low synchronous reset
   initial begin
         rst_n = 1;
     #10 rst_n = 0;
-	A = 1;
+	A = 3;
 	B = 2;
   end
   

@@ -16,13 +16,14 @@ module ALU
 	output valid
 );
 
-	wire add,sub,prod,div;
+	wire [inSize+inSize-1:0] prod,div;
+	wire [inSize-1:0] add,sub;
 
-	assign add = adder adder_DUT(.clk(clk),.rst(rst),.en(en),.A(A),.B(B),.sum(result[inSize:0]),.valid(valid));
-	assign prod = multiplier mult_DUT(.clk(clk),.rst(rst),.en(en),.A(A),.B(B),.product(result),.valid(valid));
-	assign sub = adder sub_DUT(.clk(clk),.rst(rst),.en(en),.A(A),.B(-B),.sum(result[inSize:0]),.valid(valid));
+	adder #(.inSize(inSize)) adder_DUT (.clk(clk),.rst(rst),.en(en),.A(A),.B(B),.sum(add),.valid(valid));
+	multiplier #(.inSize(inSize)) mult_DUT (.clk(clk),.rst(rst),.en(en),.A(A),.B(B),.product(prod),.valid(valid));
+	adder #(.inSize(inSize)) sub_DUT (.clk(clk),.rst(rst),.en(en),.A(A),.B(-B),.sum(sub),.valid(valid));
 	assign div = 0;
 
-	assign result = mux41 mux_DUT(operation,add,sub,prod,div,result);
+	mux41 #(.inSize(inSize+inSize)) mux_DUT(operation,add,sub,prod,div,result);
 
 endmodule

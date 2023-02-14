@@ -11,7 +11,7 @@ module adder
 	input en,
 	input [inSize-1:0] A,
 	input [inSize-1:0] B,
-	output [inSize:0] sum,
+	output [inSize-1:0] sum,
 	output valid
 );
 

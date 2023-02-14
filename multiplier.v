@@ -15,13 +15,12 @@ module multiplier
 	output valid
 );
 
-
-	reg [inSize+inSize-1:0] temp;
+	integer i;
+	reg [inSize+inSize-1:0] result;
 	always @(A or B) begin
-		temp = 0;
-		for(int i = 0;i<inSize+inSize;i++)
-			if(b[i]) temp = temp+(a<<i);
-		result = temp;
+		result = 0;
+		for(i = 0;i<inSize+inSize;i++)
+			if(B[i]) result = result+(A<<i);
 	end
 	assign product = result;
 	assign valid = en&&!rst;
