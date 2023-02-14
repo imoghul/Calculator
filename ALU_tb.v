@@ -38,14 +38,17 @@ module ALU_tb;
     #10 A=7;
         B=4;
 	operation = 2;
-    #10 A=5;
-        B=3;
+    #10 A=8;
+        B=1;
 	operation = 1;
+    #10 A=8;
+        B=2;
+	operation = 3;
 
   end
   
   initial begin
-   #40 $finish;
+   #100 $finish;
   end
 
 endmodule
